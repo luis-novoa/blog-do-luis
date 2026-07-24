@@ -1,0 +1,9 @@
+{{/*
+  Script do Google AdSense, carregado em todas as páginas.
+  Só é injetado quando params.adsenseEnabled = true e params.adsensePublisherId
+  já foi trocado pelo ID real (depois que a conta AdSense for aprovada).
+  Ver README.md para o passo a passo de ativação.
+*/}}
+{{- if and (site.Params.adsenseEnabled) (site.Params.adsensePublisherId) }}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.Params.adsensePublisherId }}" crossorigin="anonymous"></script>
+{{- end }}

@@ -1,0 +1,3 @@
+# Depois de aprovar a conta no Google AdSense, troque a linha abaixo
+# pelo valor exato que o AdSense mostrar em Sites > seu site > "ads.txt".
+# Formato: google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

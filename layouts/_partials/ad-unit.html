@@ -1,0 +1,16 @@
+{{/*
+  Slot de anúncio reutilizável. Só renderiza algo quando o AdSense
+  estiver habilitado E o publisher ID já for o real (não o placeholder).
+  Uso: {{ partial "ad-unit.html" (dict "slot" "0000000000") }}
+*/}}
+{{- if and (site.Params.adsenseEnabled) (site.Params.adsensePublisherId) }}
+<div class="ad-slot" style="margin: 2rem 0; text-align: center;">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="{{ site.Params.adsensePublisherId }}"
+       data-ad-slot="{{ .slot | default "" }}"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+{{- end }}

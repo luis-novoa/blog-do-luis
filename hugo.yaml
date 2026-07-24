@@ -1,0 +1,66 @@
+baseURL: "https://luis-novoa.github.io/blog-do-luis/"
+locale: "pt-BR"
+title: "Blog do Luis"
+theme: "PaperMod"
+
+paginate: 10
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+
+params:
+  env: production
+  description: "Blog pessoal do Luis — tecnologia, IA e o que mais der na telha."
+  author: "Luis Novoa"
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  ShowToc: true
+  comments: false
+
+  # Google AdSense — troque pelo publisher ID real depois que a conta for aprovada.
+  # Cadastro em https://adsense.google.com (passo manual, feito pelo dono do site).
+  adsensePublisherId: "ca-pub-0000000000000000"
+  adsenseEnabled: false
+
+  homeInfoParams:
+    Title: "Oi, eu sou o Luis 👋"
+    Content: "Blog pessoal sobre tecnologia, IA e o que mais me interessar no momento."
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/luis-novoa"
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: search
+      name: Buscar
+      url: /search/
+      weight: 20
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
