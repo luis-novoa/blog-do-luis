@@ -51,6 +51,10 @@ menu:
       name: Buscar
       url: /search/
       weight: 20
+    - identifier: privacidade
+      name: Privacidade
+      url: /privacidade/
+      weight: 30
 
 outputs:
   home:
